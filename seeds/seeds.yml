@@ -1,0 +1,105 @@
+version: 2
+
+seeds:
+  - name: raw_proofpoint_events
+    description: Raw phishing simulation events from Proofpoint API for Q3 2025
+    config:
+      schema: raw
+      column_types:
+        ingestion_run_id: varchar(50)
+        event_id: varchar(100)
+        event_ts: varchar(50)
+        campaign_id: varchar(50)
+        campaign_name: varchar(100)
+        template_name: varchar(100)
+        employee_email: varchar(100)
+        employee_pernr: varchar(20)
+        business_unit: varchar(50)
+        event_type: varchar(50)
+    columns:
+      - name: ingestion_run_id
+        description: Ingestion run identifier (e.g., Airflow DAG run ID)
+      - name: event_id
+        description: Unique event identifier (contains intentional duplicates for DQ testing)
+      - name: event_ts
+        description: Event timestamp in ISO 8601 format
+      - name: campaign_id
+        description: Campaign identifier (Q3 2025 examples)
+      - name: campaign_name
+        description: Human-readable campaign name
+      - name: template_name
+        description: Phishing email template name
+      - name: employee_email
+        description: Employee email address (includes null values for DQ testing)
+      - name: employee_pernr
+        description: Employee personnel number (workforce key)
+      - name: business_unit
+        description: Business unit (Cable/Corporate/NBCU/Spectacor)
+      - name: event_type
+        description: Event type (EMAIL_VIEW, REPORTED, EMAIL_CLICK, DATA_SUBMISSION, NO_ACTION)
+
+  - name: raw_workforce
+    description: Employee roster snapshot as of 2025-09-30
+    config:
+      schema: raw
+      column_types:
+        snapshot_date: date
+        pernr: varchar(20)
+        email: varchar(100)
+        full_name: varchar(100)
+        company_code: varchar(10)
+        business_unit: varchar(50)
+        department: varchar(100)
+        title: varchar(100)
+        employee_type: varchar(50)
+        employment_status: varchar(50)
+        manager_pernr: varchar(20)
+        location: varchar(100)
+    columns:
+      - name: snapshot_date
+        description: Snapshot as-of date (2025-09-30)
+      - name: pernr
+        description: Employee personnel number (primary key)
+      - name: email
+        description: Employee email address
+      - name: full_name
+        description: Employee full name
+      - name: company_code
+        description: Company code associated with business unit
+      - name: business_unit
+        description: Business unit (Cable/Corporate/NBCU/Spectacor)
+      - name: department
+        description: Department name
+      - name: title
+        description: Job title
+      - name: employee_type
+        description: Employee or Contractor
+      - name: employment_status
+        description: Active or Inactive
+      - name: manager_pernr
+        description: Manager's personnel number (nullable)
+      - name: location
+        description: Work location
+
+  - name: raw_training
+    description: Phishing awareness training assignments and completions for Q3 2025
+    config:
+      schema: raw
+      column_types:
+        pernr: varchar(20)
+        learning_content: varchar(200)
+        assigned_date: date
+        due_date: date
+        completion_date: date
+    columns:
+      - name: pernr
+        description: Employee personnel number
+      - name: learning_content
+        description: Training content title (Simulated Phishing Awareness 2025Q3)
+      - name: assigned_date
+        description: Date training was assigned
+      - name: due_date
+        description: Date training is due
+      - name: completion_date
+        description: Date training was completed (null if not yet completed)
+

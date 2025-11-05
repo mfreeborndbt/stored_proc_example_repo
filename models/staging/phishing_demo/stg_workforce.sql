@@ -1,0 +1,24 @@
+with source as (
+    select * from {{ source('phishing_demo', 'raw_workforce') }}
+),
+
+cleaned as (
+    select
+        snapshot_date::date as snapshot_date,
+        pernr,
+        email,
+        full_name,
+        company_code,
+        business_unit,
+        department,
+        title,
+        employee_type,
+        employment_status,
+        manager_pernr,
+        location
+        
+    from source
+)
+
+select * from cleaned
+

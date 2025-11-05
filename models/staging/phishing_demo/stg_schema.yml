@@ -1,0 +1,154 @@
+version: 2
+
+models:
+  - name: stg_proofpoint_events
+    description: Staged Proofpoint phishing simulation events with cleaned data types
+    columns:
+      - name: event_id
+        description: Unique event identifier (contains intentional duplicates for testing)
+        tests:
+          - not_null
+      - name: event_ts
+        description: Event timestamp
+        tests:
+          - not_null
+      - name: pernr
+        description: Employee personnel number
+        tests:
+          - not_null
+          - relationships:
+              config:
+                severity: warn
+              arguments:
+                to: ref('stg_workforce')
+                field: pernr
+      - name: campaign_id
+        description: Campaign identifier
+        tests:
+          - not_null
+      - name: campaign_name
+        description: Human-readable campaign name
+        tests:
+          - not_null
+      - name: business_unit
+        description: Business unit
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['CABLE', 'CORPORATE', 'NBCU', 'SPECTACOR']
+      - name: event_type
+        description: Type of event action
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['EMAIL_VIEW', 'REPORTED', 'EMAIL_CLICK', 'DATA_SUBMISSION', 'NO_ACTION']
+      - name: employee_email
+        description: Employee email address (may contain nulls)
+      - name: event_date
+        description: Date of the event
+        tests:
+          - not_null
+      - name: event_month
+        description: Month of the event
+        tests:
+          - not_null
+
+  - name: stg_workforce
+    description: Staged workforce roster snapshot as of 2025-09-30
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - snapshot_date
+              - pernr
+    columns:
+      - name: snapshot_date
+        description: Snapshot date
+        tests:
+          - not_null
+      - name: pernr
+        description: Employee personnel number (primary key)
+        tests:
+          - not_null
+          - unique
+      - name: email
+        description: Employee email address
+        tests:
+          - not_null
+      - name: full_name
+        description: Full name of employee
+        tests:
+          - not_null
+      - name: business_unit
+        description: Business unit
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['CABLE', 'CORPORATE', 'NBCU', 'SPECTACOR']
+      - name: department
+        description: Department
+        tests:
+          - not_null
+      - name: title
+        description: Job title
+        tests:
+          - not_null
+      - name: employee_type
+        description: Employee or Contractor
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Employee', 'Contractor']
+      - name: employment_status
+        description: Active or Inactive
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Active', 'Inactive']
+      - name: location
+        description: Work location
+        tests:
+          - not_null
+
+  - name: stg_training
+    description: Staged training assignments and completions for phishing awareness
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - pernr
+              - learning_content
+              - assigned_date
+    columns:
+      - name: pernr
+        description: Employee personnel number
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_workforce')
+                field: pernr
+      - name: learning_content
+        description: Training content title
+        tests:
+          - not_null
+      - name: assigned_date
+        description: Date training was assigned
+        tests:
+          - not_null
+      - name: due_date
+        description: Date training is due
+        tests:
+          - not_null
+      - name: is_completed
+        description: Flag indicating if training was completed
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]

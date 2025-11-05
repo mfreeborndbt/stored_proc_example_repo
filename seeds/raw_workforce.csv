@@ -1,0 +1,121 @@
+snapshot_date,pernr,email,full_name,company_code,business_unit,department,title,employee_type,employment_status,manager_pernr,location
+2025-09-30,18032585,cameron.patel@example.com,Cameron Patel,2000,CORPORATE,Marketing,Manager,Employee,Active,16112800,"Denver, CO"
+2025-09-30,79656043,sage.kim@example.com,Sage Kim,2000,CORPORATE,HR,Analyst,Employee,Active,80232787,"Denver, CO"
+2025-09-30,49499059,quinn.garcia@example.com,Quinn Garcia,3000,NBCU,Engineering,Manager,Employee,Active,41907336,"Philadelphia, PA"
+2025-09-30,48971370,jordan.patel@example.com,Jordan Patel,3000,NBCU,Marketing,Analyst,Employee,Active,76903830,"Denver, CO"
+2025-09-30,87273811,robin.nguyen@example.com,Robin Nguyen,1000,CABLE,IT Security,Manager,Employee,Active,41907336,Remote
+2025-09-30,17735107,jamie.hill@example.com,Jamie Hill,3000,NBCU,Engineering,Director,Employee,Active,59912630,"Los Angeles, CA"
+2025-09-30,72763121,casey.patel@example.com,Casey Patel,4000,SPECTACOR,Finance,Sr Analyst,Employee,Active,16870886,"Philadelphia, PA"
+2025-09-30,18475961,drew.lopez@example.com,Drew Lopez,3000,NBCU,Engineering,Sr Analyst,Employee,Active,84903381,"Los Angeles, CA"
+2025-09-30,57383107,sam.king@example.com,Sam King,1000,CABLE,Engineering,Sr Analyst,Employee,Active,93408848,"Denver, CO"
+2025-09-30,97806010,hayden.nguyen@example.com,Hayden Nguyen,4000,SPECTACOR,HR,Sr Analyst,Employee,Active,,"Denver, CO"
+2025-09-30,76217712,robin.martinez@example.com,Robin Martinez,3000,NBCU,Finance,Sr Analyst,Employee,Active,97806010,"Denver, CO"
+2025-09-30,78502572,drew.wright@example.com,Drew Wright,1000,CABLE,IT Security,Sr Analyst,Employee,Active,79656043,Remote
+2025-09-30,74572954,avery.garcia@example.com,Avery Garcia,2000,CORPORATE,IT Security,Manager,Employee,Active,80745786,Remote
+2025-09-30,80745786,hayden.johnson@example.com,Hayden Johnson,4000,SPECTACOR,Finance,Analyst,Employee,Active,24870616,Remote
+2025-09-30,56190391,drew.wright@example.com,Drew Wright,1000,CABLE,IT Security,Analyst,Employee,Active,,Remote
+2025-09-30,21530226,taylor.nguyen@example.com,Taylor Nguyen,1000,CABLE,IT Security,Director,Employee,Active,,"Denver, CO"
+2025-09-30,85577339,riley.lopez@example.com,Riley Lopez,2000,CORPORATE,Engineering,Sr Manager,Employee,Active,24870616,"Los Angeles, CA"
+2025-09-30,50534733,parker.brown@example.com,Parker Brown,4000,SPECTACOR,IT Security,Analyst,Employee,Active,85752267,"Philadelphia, PA"
+2025-09-30,55031671,jamie.lewis@example.com,Jamie Lewis,3000,NBCU,Finance,Sr Analyst,Employee,Inactive,67947860,"Denver, CO"
+2025-09-30,43371821,jordan.hill@example.com,Jordan Hill,1000,CABLE,Finance,Analyst,Employee,Active,13353608,"Los Angeles, CA"
+2025-09-30,26429467,hayden.lewis@example.com,Hayden Lewis,1000,CABLE,HR,Manager,Employee,Active,22577723,"Denver, CO"
+2025-09-30,93408848,rowan.patel@example.com,Rowan Patel,1000,CABLE,IT Security,Sr Analyst,Employee,Inactive,49565221,Remote
+2025-09-30,80341070,drew.lee@example.com,Drew Lee,2000,CORPORATE,Finance,Analyst,Employee,Active,,"Los Angeles, CA"
+2025-09-30,67947860,taylor.lewis@example.com,Taylor Lewis,4000,SPECTACOR,Marketing,Sr Analyst,Employee,Active,22577723,"NYC, NY"
+2025-09-30,46217292,emerson.rodriguez@example.com,Emerson Rodriguez,1000,CABLE,Marketing,Sr Analyst,Employee,Active,84486804,"Denver, CO"
+2025-09-30,84048544,jordan.brown@example.com,Jordan Brown,2000,CORPORATE,Finance,Sr Manager,Employee,Active,49343672,Remote
+2025-09-30,59088620,parker.wright@example.com,Parker Wright,1000,CABLE,HR,Analyst,Employee,Active,78227895,"NYC, NY"
+2025-09-30,49907277,rowan.garcia@example.com,Rowan Garcia,4000,SPECTACOR,Engineering,Analyst,Employee,Active,43371821,"Los Angeles, CA"
+2025-09-30,50541359,sam.nguyen@example.com,Sam Nguyen,1000,CABLE,Finance,Manager,Employee,Active,52398658,"Denver, CO"
+2025-09-30,30451484,parker.lopez@example.com,Parker Lopez,3000,NBCU,Engineering,Analyst,Employee,Active,17735107,Remote
+2025-09-30,18292232,robin.rodriguez@example.com,Robin Rodriguez,1000,CABLE,Finance,Sr Analyst,Employee,Active,27517483,Remote
+2025-09-30,59912630,quinn.patel@example.com,Quinn Patel,3000,NBCU,HR,Director,Employee,Active,51302419,"Los Angeles, CA"
+2025-09-30,15743552,hayden.allen@example.com,Hayden Allen,2000,CORPORATE,Finance,Sr Analyst,Employee,Active,73023858,"Los Angeles, CA"
+2025-09-30,87246215,riley.rodriguez@example.com,Riley Rodriguez,1000,CABLE,Engineering,Sr Analyst,Employee,Active,93027504,"Los Angeles, CA"
+2025-09-30,84486804,morgan.davis@example.com,Morgan Davis,3000,NBCU,IT Security,Analyst,Contractor,Active,35949529,"NYC, NY"
+2025-09-30,34908372,drew.clark@example.com,Drew Clark,3000,NBCU,Engineering,Sr Manager,Employee,Active,49343672,"Philadelphia, PA"
+2025-09-30,66849795,parker.lee@example.com,Parker Lee,3000,NBCU,IT Security,Sr Manager,Employee,Active,30421841,"Los Angeles, CA"
+2025-09-30,24870616,cameron.patel@example.com,Cameron Patel,4000,SPECTACOR,Marketing,Director,Employee,Active,85577339,Remote
+2025-09-30,78227895,hayden.hill@example.com,Hayden Hill,1000,CABLE,HR,Manager,Employee,Active,21530226,"Denver, CO"
+2025-09-30,73047066,alex.lewis@example.com,Alex Lewis,2000,CORPORATE,Marketing,Sr Manager,Employee,Active,39324281,"Philadelphia, PA"
+2025-09-30,41907336,rowan.wright@example.com,Rowan Wright,1000,CABLE,Finance,Analyst,Employee,Active,46217292,"Los Angeles, CA"
+2025-09-30,16112800,parker.johnson@example.com,Parker Johnson,3000,NBCU,HR,Analyst,Employee,Active,90827885,Remote
+2025-09-30,97362821,jordan.patel@example.com,Jordan Patel,2000,CORPORATE,HR,Sr Analyst,Employee,Active,,"NYC, NY"
+2025-09-30,50111873,hayden.walker@example.com,Hayden Walker,1000,CABLE,Engineering,Director,Employee,Inactive,15743552,Remote
+2025-09-30,90380900,reese.walker@example.com,Reese Walker,1000,CABLE,Engineering,Manager,Employee,Active,21692935,"Denver, CO"
+2025-09-30,71012710,casey.scott@example.com,Casey Scott,2000,CORPORATE,Engineering,Sr Analyst,Contractor,Active,80054513,Remote
+2025-09-30,80054513,alex.lopez@example.com,Alex Lopez,1000,CABLE,Marketing,Analyst,Contractor,Active,81715831,"Los Angeles, CA"
+2025-09-30,78390948,sam.young@example.com,Sam Young,1000,CABLE,HR,Analyst,Employee,Active,79656043,Remote
+2025-09-30,27517483,casey.young@example.com,Casey Young,1000,CABLE,Finance,Analyst,Employee,Active,18032585,"NYC, NY"
+2025-09-30,42751542,emerson.kim@example.com,Emerson Kim,3000,NBCU,Finance,Director,Employee,Active,59191254,"Philadelphia, PA"
+2025-09-30,52004889,drew.kim@example.com,Drew Kim,1000,CABLE,Marketing,Manager,Employee,Active,97075874,Remote
+2025-09-30,54801238,parker.patel@example.com,Parker Patel,1000,CABLE,Finance,Manager,Contractor,Active,57383107,"Los Angeles, CA"
+2025-09-30,13942338,alex.lee@example.com,Alex Lee,3000,NBCU,Engineering,Analyst,Employee,Active,,"Los Angeles, CA"
+2025-09-30,59191254,cameron.martinez@example.com,Cameron Martinez,3000,NBCU,IT Security,Manager,Employee,Active,70283258,"Denver, CO"
+2025-09-30,23886054,cameron.clark@example.com,Cameron Clark,2000,CORPORATE,Marketing,Director,Employee,Active,55504562,"Denver, CO"
+2025-09-30,76903830,jordan.garcia@example.com,Jordan Garcia,1000,CABLE,HR,Sr Analyst,Employee,Active,87246215,Remote
+2025-09-30,71474405,robin.nguyen@example.com,Robin Nguyen,1000,CABLE,Engineering,Manager,Employee,Active,93027504,"Denver, CO"
+2025-09-30,93027504,jordan.kim@example.com,Jordan Kim,2000,CORPORATE,IT Security,Manager,Employee,Active,81611196,"NYC, NY"
+2025-09-30,77028593,hayden.johnson@example.com,Hayden Johnson,2000,CORPORATE,Engineering,Manager,Employee,Active,52260022,Remote
+2025-09-30,42997838,jordan.hill@example.com,Jordan Hill,2000,CORPORATE,Marketing,Sr Manager,Employee,Active,39324281,"Philadelphia, PA"
+2025-09-30,97075874,jordan.patel@example.com,Jordan Patel,3000,NBCU,Finance,Analyst,Employee,Active,49169499,"NYC, NY"
+2025-09-30,46976531,sam.allen@example.com,Sam Allen,1000,CABLE,Engineering,Sr Manager,Employee,Active,10662604,"Los Angeles, CA"
+2025-09-30,39324281,jordan.clark@example.com,Jordan Clark,4000,SPECTACOR,IT Security,Director,Employee,Active,50534733,"Los Angeles, CA"
+2025-09-30,91498217,hayden.brown@example.com,Hayden Brown,2000,CORPORATE,IT Security,Analyst,Employee,Active,79656043,"Denver, CO"
+2025-09-30,43341373,emerson.hill@example.com,Emerson Hill,2000,CORPORATE,HR,Sr Manager,Contractor,Active,80823193,"NYC, NY"
+2025-09-30,16870886,morgan.patel@example.com,Morgan Patel,3000,NBCU,Finance,Sr Analyst,Employee,Active,,"Denver, CO"
+2025-09-30,52260022,rowan.lee@example.com,Rowan Lee,1000,CABLE,Finance,Sr Analyst,Employee,Active,34908372,"NYC, NY"
+2025-09-30,81611196,riley.wright@example.com,Riley Wright,2000,CORPORATE,HR,Manager,Employee,Active,84903381,"NYC, NY"
+2025-09-30,27052422,parker.clark@example.com,Parker Clark,1000,CABLE,HR,Sr Analyst,Employee,Active,80823193,"Denver, CO"
+2025-09-30,51664650,rowan.johnson@example.com,Rowan Johnson,3000,NBCU,Engineering,Sr Analyst,Employee,Active,49499059,"NYC, NY"
+2025-09-30,21692935,sage.hill@example.com,Sage Hill,2000,CORPORATE,IT Security,Sr Analyst,Employee,Active,,"Philadelphia, PA"
+2025-09-30,71783038,quinn.davis@example.com,Quinn Davis,1000,CABLE,Finance,Analyst,Employee,Active,71783038,"Los Angeles, CA"
+2025-09-30,52813442,sage.wright@example.com,Sage Wright,2000,CORPORATE,Marketing,Sr Manager,Contractor,Active,,"Los Angeles, CA"
+2025-09-30,39717669,hayden.martinez@example.com,Hayden Martinez,1000,CABLE,HR,Manager,Employee,Active,52004889,Remote
+2025-09-30,30421841,jordan.scott@example.com,Jordan Scott,1000,CABLE,HR,Manager,Employee,Active,82428791,"Denver, CO"
+2025-09-30,60804989,hayden.scott@example.com,Hayden Scott,4000,SPECTACOR,Engineering,Sr Analyst,Contractor,Active,94627547,"Philadelphia, PA"
+2025-09-30,70283258,riley.lewis@example.com,Riley Lewis,3000,NBCU,IT Security,Sr Manager,Employee,Active,61186707,"NYC, NY"
+2025-09-30,94627547,jordan.hill@example.com,Jordan Hill,3000,NBCU,Marketing,Sr Manager,Employee,Active,71012710,"Philadelphia, PA"
+2025-09-30,49343672,rowan.kim@example.com,Rowan Kim,2000,CORPORATE,IT Security,Analyst,Employee,Active,80232787,"Los Angeles, CA"
+2025-09-30,24461934,robin.young@example.com,Robin Young,3000,NBCU,HR,Analyst,Employee,Active,,Remote
+2025-09-30,84941036,casey.allen@example.com,Casey Allen,1000,CABLE,Engineering,Analyst,Employee,Active,66678786,"NYC, NY"
+2025-09-30,66678786,robin.allen@example.com,Robin Allen,3000,NBCU,Engineering,Analyst,Employee,Active,86957199,"Philadelphia, PA"
+2025-09-30,73023858,sage.lopez@example.com,Sage Lopez,2000,CORPORATE,Marketing,Sr Analyst,Contractor,Active,74572954,"NYC, NY"
+2025-09-30,18750396,sam.patel@example.com,Sam Patel,1000,CABLE,Engineering,Sr Analyst,Employee,Active,49499059,Remote
+2025-09-30,38112997,sage.scott@example.com,Sage Scott,2000,CORPORATE,Marketing,Analyst,Employee,Active,34940945,Remote
+2025-09-30,79105951,morgan.clark@example.com,Morgan Clark,3000,NBCU,IT Security,Manager,Employee,Active,21692935,"Philadelphia, PA"
+2025-09-30,84903381,taylor.johnson@example.com,Taylor Johnson,1000,CABLE,HR,Manager,Employee,Active,69836576,"Denver, CO"
+2025-09-30,49169499,rowan.scott@example.com,Rowan Scott,3000,NBCU,IT Security,Director,Employee,Active,84946306,"NYC, NY"
+2025-09-30,82428791,jordan.davis@example.com,Jordan Davis,4000,SPECTACOR,Marketing,Sr Analyst,Employee,Active,,"Los Angeles, CA"
+2025-09-30,85752267,jordan.rodriguez@example.com,Jordan Rodriguez,1000,CABLE,Finance,Analyst,Employee,Active,17735107,"Philadelphia, PA"
+2025-09-30,44873053,reese.garcia@example.com,Reese Garcia,1000,CABLE,Marketing,Manager,Employee,Active,18475961,"NYC, NY"
+2025-09-30,90827885,robin.nguyen@example.com,Robin Nguyen,1000,CABLE,Finance,Sr Manager,Employee,Active,48971370,"NYC, NY"
+2025-09-30,35949529,robin.davis@example.com,Robin Davis,3000,NBCU,Engineering,Analyst,Employee,Active,81715831,Remote
+2025-09-30,31560200,quinn.johnson@example.com,Quinn Johnson,1000,CABLE,IT Security,Director,Employee,Active,80341070,"Philadelphia, PA"
+2025-09-30,71424594,skyler.lee@example.com,Skyler Lee,1000,CABLE,Finance,Analyst,Employee,Active,61186707,"Los Angeles, CA"
+2025-09-30,67308563,skyler.martinez@example.com,Skyler Martinez,2000,CORPORATE,IT Security,Manager,Employee,Active,,"Denver, CO"
+2025-09-30,22577723,skyler.martinez@example.com,Skyler Martinez,3000,NBCU,Finance,Sr Manager,Employee,Active,70156265,"Los Angeles, CA"
+2025-09-30,84946306,rowan.scott@example.com,Rowan Scott,1000,CABLE,Marketing,Sr Analyst,Employee,Active,84946306,"Denver, CO"
+2025-09-30,82440919,robin.walker@example.com,Robin Walker,1000,CABLE,IT Security,Analyst,Employee,Active,24461934,"Los Angeles, CA"
+2025-09-30,10662604,emerson.allen@example.com,Emerson Allen,3000,NBCU,HR,Sr Manager,Employee,Active,78227895,"Los Angeles, CA"
+2025-09-30,81715831,quinn.patel@example.com,Quinn Patel,2000,CORPORATE,Finance,Director,Employee,Active,,"Denver, CO"
+2025-09-30,80823193,cameron.brown@example.com,Cameron Brown,3000,NBCU,Finance,Sr Manager,Employee,Active,84903381,"Philadelphia, PA"
+2025-09-30,80232787,robin.lewis@example.com,Robin Lewis,1000,CABLE,IT Security,Sr Manager,Employee,Active,24461934,Remote
+2025-09-30,69836576,reese.wright@example.com,Reese Wright,2000,CORPORATE,IT Security,Manager,Employee,Active,90827885,"Denver, CO"
+2025-09-30,52441042,casey.king@example.com,Casey King,4000,SPECTACOR,Finance,Sr Analyst,Employee,Active,52004889,"Denver, CO"
+2025-09-30,73464883,robin.hill@example.com,Robin Hill,3000,NBCU,Finance,Sr Analyst,Employee,Active,,"NYC, NY"
+2025-09-30,34940945,taylor.young@example.com,Taylor Young,3000,NBCU,Finance,Director,Employee,Active,94627547,Remote
+2025-09-30,60008225,skyler.brown@example.com,Skyler Brown,2000,CORPORATE,Finance,Manager,Employee,Active,85752267,"Los Angeles, CA"
+2025-09-30,51302419,rowan.young@example.com,Rowan Young,3000,NBCU,HR,Analyst,Employee,Active,84048544,Remote
+2025-09-30,55504562,sage.brown@example.com,Sage Brown,3000,NBCU,HR,Sr Analyst,Employee,Active,34940945,"NYC, NY"
+2025-09-30,61186707,robin.lee@example.com,Robin Lee,4000,SPECTACOR,Marketing,Sr Analyst,Employee,Active,35949529,"Philadelphia, PA"
+2025-09-30,13353608,morgan.nguyen@example.com,Morgan Nguyen,3000,NBCU,Finance,Director,Employee,Active,41907336,"Denver, CO"
+2025-09-30,22581729,reese.johnson@example.com,Reese Johnson,1000,CABLE,IT Security,Analyst,Employee,Active,21530226,"Philadelphia, PA"
+2025-09-30,32093304,alex.martinez@example.com,Alex Martinez,4000,SPECTACOR,IT Security,Sr Analyst,Employee,Active,49343672,"NYC, NY"
+2025-09-30,20307706,hayden.johnson@example.com,Hayden Johnson,4000,SPECTACOR,HR,Director,Contractor,Inactive,42751542,"Philadelphia, PA"
+2025-09-30,49565221,rowan.johnson@example.com,Rowan Johnson,2000,CORPORATE,Engineering,Sr Manager,Employee,Active,78502572,"Philadelphia, PA"
+2025-09-30,70156265,casey.martinez@example.com,Casey Martinez,3000,NBCU,Finance,Manager,Employee,Active,81715831,"Denver, CO"
+2025-09-30,68898596,jordan.king@example.com,Jordan King,3000,NBCU,Finance,Director,Employee,Active,46217292,"NYC, NY"
+2025-09-30,52398658,casey.nguyen@example.com,Casey Nguyen,1000,CABLE,HR,Sr Analyst,Employee,Active,85577339,Remote
+2025-09-30,86957199,cameron.lopez@example.com,Cameron Lopez,1000,CABLE,Engineering,Analyst,Employee,Active,,"Denver, CO"

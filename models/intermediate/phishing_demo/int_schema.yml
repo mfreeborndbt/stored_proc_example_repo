@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: int_events_consolidated
+    description: Consolidated phishing events with one row per employee per campaign (worst action)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - pernr
+              - campaign_id
+    columns:
+      - name: pernr
+        description: Employee personnel number
+        tests:
+          - not_null
+      - name: campaign_id
+        description: Campaign identifier
+        tests:
+          - not_null
+      - name: final_event_type
+        description: Final (worst) event type for this employee in this campaign
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['EMAIL_VIEW', 'REPORTED', 'EMAIL_CLICK', 'DATA_SUBMISSION', 'NO_ACTION']
+      - name: event_severity_rank
+        description: Severity ranking (1=worst, 5=best)
+        tests:
+          - not_null
+      - name: event_month
+        description: Month of the campaign
+        tests:
+          - not_null
+
+  - name: int_employee_campaign_behavior
+    description: Employee campaign behavior with workforce and training data joined
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - pernr
+              - campaign_id
+    columns:
+      - name: pernr
+        description: Employee personnel number
+        tests:
+          - not_null
+      - name: campaign_id
+        description: Campaign identifier
+        tests:
+          - not_null
+      - name: risk_level
+        description: Risk level categorization
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Critical', 'High', 'Medium', 'Low', 'Unknown']
+      - name: is_clicker
+        description: Flag for employees who clicked or submitted data
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]

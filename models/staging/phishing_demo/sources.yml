@@ -1,0 +1,74 @@
+version: 2
+
+sources:
+  - name: phishing_demo
+    description: Raw phishing simulation and workforce data for Q3 2025 demo
+    database: MILES_F_STORED_PROC_EXAMPLE
+    schema: dbt_miles_freeborn_raw
+    tables:
+      - name: raw_proofpoint_events
+        description: Raw, append-only events as if pulled from the Proofpoint API
+        columns:
+          - name: ingestion_run_id
+            description: Ingestion run identifier (e.g., Airflow DAG run)
+          - name: event_id
+            description: Unique event identifier (intentionally includes a few dups for DQ tests)
+          - name: event_ts
+            description: Event timestamp (ISO 8601)
+          - name: campaign_id
+            description: Campaign ID (Q3 2025 examples)
+          - name: campaign_name
+            description: Human-readable campaign name
+          - name: template_name
+            description: Template name (often same as campaign name)
+          - name: employee_email
+            description: Employee email (one null included for DQ)
+          - name: employee_pernr
+            description: Workforce key
+          - name: business_unit
+            description: Cable/Corporate/NBCU/Spectacor
+          - name: event_type
+            description: One of EMAIL_VIEW, REPORTED, EMAIL_CLICK, DATA_SUBMISSION, NO_ACTION
+            
+      - name: raw_workforce
+        description: Minimal employee roster (snapshot as-of 2025-09-30)
+        columns:
+          - name: snapshot_date
+            description: Snapshot as-of date
+          - name: pernr
+            description: Employee ID
+          - name: email
+            description: Email address
+          - name: full_name
+            description: Full name
+          - name: company_code
+            description: Company code per BU
+          - name: business_unit
+            description: Business unit
+          - name: department
+            description: Department
+          - name: title
+            description: Title
+          - name: employee_type
+            description: Employee or Contractor
+          - name: employment_status
+            description: Active/Inactive
+          - name: manager_pernr
+            description: Manager employee ID (nullable)
+          - name: location
+            description: Location string
+            
+      - name: raw_training
+        description: Assignments/completions for clickers
+        columns:
+          - name: pernr
+            description: Employee ID for the assignment
+          - name: learning_content
+            description: Training title
+          - name: assigned_date
+            description: Assignment date
+          - name: due_date
+            description: Due date
+          - name: completion_date
+            description: Null if not completed
+
