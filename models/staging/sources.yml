@@ -5,6 +5,11 @@ sources:
     description: Raw phishing simulation and workforce data for Q3 2025 demo
     database: MILES_F_STORED_PROC_EXAMPLE
     schema: dbt_miles_freeborn_raw
+    config: 
+      # changed to config in v1.9
+      freshness: # default freshness
+        warn_after: {count: 12, period: day}
+
     tables:
       - name: raw_proofpoint_events
         description: Raw, append-only events as if pulled from the Proofpoint API
