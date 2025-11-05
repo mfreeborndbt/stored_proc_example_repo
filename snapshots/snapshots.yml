@@ -16,19 +16,17 @@ snapshots:
         - employment_status
         - location
         - manager_pernr
-      target_database: MILES_F_STORED_PROC_EXAMPLE
-      target_schema: snapshots
+      schema: snapshots
     description: Snapshot of workforce data to track employee attribute changes over time
     
   - name: snap_training
     relation: source('phishing_demo', 'raw_training')
     config:
       strategy: check
-      unique_key: "{{ dbt_utils.generate_surrogate_key(['pernr', 'learning_content', 'assigned_date']) }}"
+      unique_key: pernr || '_' || learning_content || '_' || assigned_date
       check_cols:
         - due_date
         - completion_date
-      target_database: MILES_F_STORED_PROC_EXAMPLE
-      target_schema: snapshots
+      schema: snapshots
     description: Snapshot of training assignments to track completion status changes
 
