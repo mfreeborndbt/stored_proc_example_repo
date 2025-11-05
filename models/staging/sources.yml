@@ -4,7 +4,7 @@ sources:
   - name: phishing_demo
     description: Raw phishing simulation and workforce data for Q3 2025 demo
     database: MILES_F_STORED_PROC_EXAMPLE
-    schema: raw
+    schema: dbt_miles_freeborn_raw
     tables:
       - name: raw_proofpoint_events
         description: Raw, append-only events as if pulled from the Proofpoint API
