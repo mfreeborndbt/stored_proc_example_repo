@@ -1,0 +1,34 @@
+version: 2
+
+snapshots:
+  - name: snap_workforce
+    relation: source('phishing_demo', 'raw_workforce')
+    config:
+      strategy: check
+      unique_key: pernr
+      check_cols:
+        - email
+        - full_name
+        - business_unit
+        - department
+        - title
+        - employee_type
+        - employment_status
+        - location
+        - manager_pernr
+      target_database: MILES_F_STORED_PROC_EXAMPLE
+      target_schema: snapshots
+    description: Snapshot of workforce data to track employee attribute changes over time
+    
+  - name: snap_training
+    relation: source('phishing_demo', 'raw_training')
+    config:
+      strategy: check
+      unique_key: "{{ dbt_utils.generate_surrogate_key(['pernr', 'learning_content', 'assigned_date']) }}"
+      check_cols:
+        - due_date
+        - completion_date
+      target_database: MILES_F_STORED_PROC_EXAMPLE
+      target_schema: snapshots
+    description: Snapshot of training assignments to track completion status changes
+

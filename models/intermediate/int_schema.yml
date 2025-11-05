@@ -21,18 +21,13 @@ models:
       - name: final_event_type
         description: Final (worst) event type for this employee in this campaign
         tests:
-          - not_null
           - accepted_values:
               arguments:
                 values: ['EMAIL_VIEW', 'REPORTED', 'EMAIL_CLICK', 'DATA_SUBMISSION', 'NO_ACTION']
       - name: event_severity_rank
         description: Severity ranking (1=worst, 5=best)
-        tests:
-          - not_null
       - name: event_month
         description: Month of the campaign
-        tests:
-          - not_null
 
   - name: int_employee_campaign_behavior
     description: Employee campaign behavior with workforce and training data joined

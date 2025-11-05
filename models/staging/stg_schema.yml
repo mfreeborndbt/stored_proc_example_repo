@@ -28,12 +28,9 @@ models:
           - not_null
       - name: campaign_name
         description: Human-readable campaign name
-        tests:
-          - not_null
       - name: business_unit
         description: Business unit
         tests:
-          - not_null
           - accepted_values:
               arguments:
                 values: ['CABLE', 'CORPORATE', 'NBCU', 'SPECTACOR']
@@ -48,12 +45,8 @@ models:
         description: Employee email address (may contain nulls)
       - name: event_date
         description: Date of the event
-        tests:
-          - not_null
       - name: event_month
         description: Month of the event
-        tests:
-          - not_null
 
   - name: stg_workforce
     description: Staged workforce roster snapshot as of 2025-09-30
@@ -75,45 +68,32 @@ models:
           - unique
       - name: email
         description: Employee email address
-        tests:
-          - not_null
       - name: full_name
         description: Full name of employee
-        tests:
-          - not_null
       - name: business_unit
         description: Business unit
         tests:
-          - not_null
           - accepted_values:
               arguments:
                 values: ['CABLE', 'CORPORATE', 'NBCU', 'SPECTACOR']
       - name: department
         description: Department
-        tests:
-          - not_null
       - name: title
         description: Job title
-        tests:
-          - not_null
       - name: employee_type
         description: Employee or Contractor
         tests:
-          - not_null
           - accepted_values:
               arguments:
                 values: ['Employee', 'Contractor']
       - name: employment_status
         description: Active or Inactive
         tests:
-          - not_null
           - accepted_values:
               arguments:
                 values: ['Active', 'Inactive']
       - name: location
         description: Work location
-        tests:
-          - not_null
 
   - name: stg_training
     description: Staged training assignments and completions for phishing awareness

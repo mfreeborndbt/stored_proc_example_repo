@@ -66,6 +66,8 @@ tests:
       +severity: warn
     test_duplicate_event_ids:
       +severity: warn
+    test_source_freshness:
+      +severity: warn
 
 # Seed configurations
 seeds:

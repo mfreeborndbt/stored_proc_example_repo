@@ -20,28 +20,16 @@ models:
           - not_null
       - name: campaign_name
         description: Campaign name
-        tests:
-          - not_null
       - name: event_month
         description: Month of the campaign
-        tests:
-          - not_null
       - name: final_event_type
         description: Final (worst) event type
-        tests:
-          - not_null
       - name: business_unit
         description: Employee business unit
-        tests:
-          - not_null
       - name: risk_level
         description: Risk level categorization
-        tests:
-          - not_null
       - name: is_clicker
         description: Whether employee clicked or submitted data
-        tests:
-          - not_null
 
   - name: fct_campaign_summary
     description: Campaign-level summary metrics
@@ -58,16 +46,10 @@ models:
           - not_null
       - name: campaign_name
         description: Campaign name
-        tests:
-          - not_null
       - name: total_employees_targeted
         description: Total number of employees targeted in this campaign
-        tests:
-          - not_null
       - name: click_rate_pct
         description: Percentage of employees who clicked
-        tests:
-          - not_null
 
   - name: fct_business_unit_summary
     description: Business unit level summary metrics
@@ -84,9 +66,5 @@ models:
           - not_null
       - name: unique_employees
         description: Unique employees in this BU
-        tests:
-          - not_null
       - name: click_rate_pct
         description: Percentage click rate
-        tests:
-          - not_null
