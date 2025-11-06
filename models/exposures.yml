@@ -1,0 +1,28 @@
+version: 2
+
+exposures:
+  - name: tableau_phishing_analytics_dashboard
+    label: Phishing Analytics Dashboard
+    type: dashboard
+    maturity: high
+    url: https://tableau.example.com/dashboards/phishing-analytics
+    description: |
+      Executive dashboard providing comprehensive phishing simulation analytics.
+      
+      Key features:
+      - Employee-level campaign behavior and risk assessment
+      - Campaign performance metrics and click-through rates
+      - Training completion tracking for at-risk employees
+      - Business unit comparisons and trends over time
+      
+      This dashboard enables security teams to identify high-risk employees,
+      measure campaign effectiveness, and track remediation efforts.
+    
+    depends_on:
+      - ref('fct_employee_campaign_events')
+      - ref('fct_campaign_summary')
+    
+    owner:
+      name: Miles Freeborn
+      email: miles.freeborn@example.com
+
