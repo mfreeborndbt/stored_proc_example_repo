@@ -19,7 +19,7 @@ exposures:
       measure campaign effectiveness, and track remediation efforts.
     
     depends_on:
-      - ref('fct_employee_campaign_events')
+      - ref('fct_business_unit_summary')
       - ref('fct_campaign_summary')
     
     owner:
