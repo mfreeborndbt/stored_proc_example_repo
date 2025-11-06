@@ -63,7 +63,7 @@ events_with_employees as (
 ),
 
 -- Add training information for clickers
-final as (
+enriched as (
     select
         e.*,
         t.learning_content,
@@ -78,6 +78,13 @@ final as (
     left join training t
         on e.pernr = t.pernr
         and t.learning_content = 'Simulated Phishing Awareness 2025Q3'
+),
+
+final as (
+    select
+        {{ dbt_utils.generate_surrogate_key(['pernr', 'campaign_id']) }} as employee_campaign_key,
+        *
+    from enriched
 )
 
 select * from final

@@ -1,32 +1,50 @@
 version: 2
 
 snapshots:
-  - name: snap_workforce
-    relation: source('phishing_demo', 'raw_workforce')
+  - name: snap_campaign_summary
+    relation: ref('fct_campaign_summary')
     config:
       strategy: check
-      unique_key: pernr
+      unique_key: campaign_id || '_' || event_month
       check_cols:
-        - email
-        - full_name
-        - business_unit
-        - department
-        - title
-        - employee_type
-        - employment_status
-        - location
-        - manager_pernr
+        - total_employees_targeted
+        - employees_who_engaged
+        - employees_data_submission
+        - employees_clicked
+        - employees_viewed
+        - employees_reported
+        - employees_no_action
+        - total_clickers
+        - critical_risk_count
+        - high_risk_count
+        - medium_risk_count
+        - clickers_completed_training
+        - clickers_not_completed_training
+        - click_rate_pct
+        - report_rate_pct
+        - clicker_training_completion_rate_pct
       schema: snapshots
-    description: Snapshot of workforce data to track employee attribute changes over time
+    description: Snapshot of campaign-level metrics to track performance changes over time
     
-  - name: snap_training
-    relation: source('phishing_demo', 'raw_training')
+  - name: snap_business_unit_summary
+    relation: ref('fct_business_unit_summary')
     config:
       strategy: check
-      unique_key: pernr || '_' || learning_content || '_' || assigned_date
+      unique_key: business_unit || '_' || event_month
       check_cols:
-        - due_date
-        - completion_date
+        - unique_employees
+        - campaigns_participated
+        - total_campaign_participations
+        - data_submissions
+        - email_clicks
+        - email_views
+        - emails_reported
+        - no_actions
+        - total_click_incidents
+        - unique_clickers
+        - click_rate_pct
+        - report_rate_pct
+        - avg_event_severity_rank
       schema: snapshots
-    description: Snapshot of training assignments to track completion status changes
+    description: Snapshot of business unit-level metrics to track performance changes over time
 

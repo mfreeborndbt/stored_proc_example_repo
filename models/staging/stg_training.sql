@@ -25,7 +25,14 @@ cleaned as (
         datediff(day, assigned_date::date, coalesce(completion_date::date, current_date)) as days_to_complete
         
     from source
+),
+
+final as (
+    select
+        {{ dbt_utils.generate_surrogate_key(['pernr', 'learning_content', 'assigned_date']) }} as training_key,
+        *
+    from cleaned
 )
 
-select * from cleaned
+select * from final
 

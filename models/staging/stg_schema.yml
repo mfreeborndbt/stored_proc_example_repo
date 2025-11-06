@@ -50,13 +50,12 @@ models:
 
   - name: stg_workforce
     description: Staged workforce roster snapshot as of 2025-09-30
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          arguments:
-            combination_of_columns:
-              - snapshot_date
-              - pernr
     columns:
+      - name: workforce_key
+        description: Surrogate key generated from snapshot_date and pernr
+        tests:
+          - unique
+          - not_null
       - name: snapshot_date
         description: Snapshot date
         tests:
@@ -97,14 +96,12 @@ models:
 
   - name: stg_training
     description: Staged training assignments and completions for phishing awareness
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          arguments:
-            combination_of_columns:
-              - pernr
-              - learning_content
-              - assigned_date
     columns:
+      - name: training_key
+        description: Surrogate key generated from pernr, learning_content, and assigned_date
+        tests:
+          - unique
+          - not_null
       - name: pernr
         description: Employee personnel number
         tests:

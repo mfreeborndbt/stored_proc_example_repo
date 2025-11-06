@@ -61,7 +61,14 @@ consolidated as (
     from ranked_events
     where event_rank = 1
     group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+),
+
+final as (
+    select
+        {{ dbt_utils.generate_surrogate_key(['pernr', 'campaign_id']) }} as event_consolidated_key,
+        *
+    from consolidated
 )
 
-select * from consolidated
+select * from final
 

@@ -3,13 +3,12 @@ version: 2
 models:
   - name: fct_employee_campaign_events
     description: Fact table showing phishing simulation results at employee x campaign grain
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          arguments:
-            combination_of_columns:
-              - pernr
-              - campaign_id
     columns:
+      - name: employee_campaign_event_key
+        description: Surrogate key generated from pernr and campaign_id
+        tests:
+          - unique
+          - not_null
       - name: pernr
         description: Employee personnel number
         tests:
@@ -33,13 +32,12 @@ models:
 
   - name: fct_campaign_summary
     description: Campaign-level summary metrics
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          arguments:
-            combination_of_columns:
-              - campaign_id
-              - event_month
     columns:
+      - name: campaign_summary_key
+        description: Surrogate key generated from campaign_id and event_month
+        tests:
+          - unique
+          - not_null
       - name: campaign_id
         description: Campaign identifier
         tests:
@@ -53,13 +51,12 @@ models:
 
   - name: fct_business_unit_summary
     description: Business unit level summary metrics
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          arguments:
-            combination_of_columns:
-              - business_unit
-              - event_month
     columns:
+      - name: business_unit_summary_key
+        description: Surrogate key generated from business_unit and event_month
+        tests:
+          - unique
+          - not_null
       - name: business_unit
         description: Business unit
         tests:

@@ -34,7 +34,14 @@ bu_metrics as (
         
     from employee_events
     group by 1, 2
+),
+
+final as (
+    select
+        {{ dbt_utils.generate_surrogate_key(['business_unit', 'event_month']) }} as business_unit_summary_key,
+        *
+    from bu_metrics
 )
 
-select * from bu_metrics
+select * from final
 

@@ -3,13 +3,12 @@ version: 2
 models:
   - name: int_events_consolidated
     description: Consolidated phishing events with one row per employee per campaign (worst action)
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          arguments:
-            combination_of_columns:
-              - pernr
-              - campaign_id
     columns:
+      - name: event_consolidated_key
+        description: Surrogate key generated from pernr and campaign_id
+        tests:
+          - unique
+          - not_null
       - name: pernr
         description: Employee personnel number
         tests:
@@ -31,13 +30,12 @@ models:
 
   - name: int_employee_campaign_behavior
     description: Employee campaign behavior with workforce and training data joined
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          arguments:
-            combination_of_columns:
-              - pernr
-              - campaign_id
     columns:
+      - name: employee_campaign_key
+        description: Surrogate key generated from pernr and campaign_id
+        tests:
+          - unique
+          - not_null
       - name: pernr
         description: Employee personnel number
         tests:

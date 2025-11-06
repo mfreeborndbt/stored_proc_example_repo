@@ -40,7 +40,14 @@ campaign_metrics as (
         
     from employee_events
     group by 1, 2, 3
+),
+
+final as (
+    select
+        {{ dbt_utils.generate_surrogate_key(['campaign_id', 'event_month']) }} as campaign_summary_key,
+        *
+    from campaign_metrics
 )
 
-select * from campaign_metrics
+select * from final
 

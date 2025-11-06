@@ -3,7 +3,7 @@ with employee_campaign_behavior as (
     select * from {{ ref('int_employee_campaign_behavior') }}
 ),
 
-final as (
+enriched as (
     select
         -- Keys
         pernr,
@@ -63,6 +63,13 @@ final as (
         end as training_status_category
         
     from employee_campaign_behavior
+),
+
+final as (
+    select
+        {{ dbt_utils.generate_surrogate_key(['pernr', 'campaign_id']) }} as employee_campaign_event_key,
+        *
+    from enriched
 )
 
 select * from final

@@ -18,7 +18,14 @@ cleaned as (
         location
         
     from source
+),
+
+final as (
+    select
+        {{ dbt_utils.generate_surrogate_key(['snapshot_date', 'pernr']) }} as workforce_key,
+        *
+    from cleaned
 )
 
-select * from cleaned
+select * from final
 
